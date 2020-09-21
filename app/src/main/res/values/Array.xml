@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opciones">
+        <item> Guayaquil </item>
+        <item> Naranjito </item>
+        <item> Posorja </item>
+        <item> Duran </item>
+        <item> Milagro </item>
+    </string-array>
+
+</resources>
