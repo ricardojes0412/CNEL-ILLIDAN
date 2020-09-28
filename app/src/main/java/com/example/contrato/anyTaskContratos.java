@@ -3,7 +3,7 @@ package com.example.contrato;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.*;
-import com.example.illidan.MainActivity;
+
 import com.example.illidan.R;
 
 public class anyTaskContratos extends AsyncTask<String, Integer, String> {
@@ -23,14 +23,14 @@ public class anyTaskContratos extends AsyncTask<String, Integer, String> {
     public anyTaskContratos (Contratos context){
         this.context = context;
         this.progressBar = (ProgressBar)context.findViewById(R.id.progressBarGuardar);
-        this.idOrden = (EditText )context.findViewById(R.id.idOrden);
-        this.idfecha = (EditText)context.findViewById(R.id.idFecha);
-        this.idCantones = (Spinner)context.findViewById(R.id.lisCiudades);
+        this.idOrden = (EditText )context.findViewById(R.id.marcaProducto);
+        this.idfecha = (EditText)context.findViewById(R.id.fechaRegPro);
+        this.idCantones = (Spinner)context.findViewById(R.id.listaTipoInve);
         this.idCliente = (EditText )context.findViewById(R.id.idCliente);
-        this.idDireccion = (EditText )context.findViewById(R.id.idDireccion);
+        this.idDireccion = (EditText )context.findViewById(R.id.cantidad);
         this.idDescripcion = (EditText )context.findViewById(R.id.idDescripcion);
-        this.guardar = (Button)context.findViewById(R.id.idGuardar);
-        this.cancelar = (Button)context.findViewById(R.id.idCancelar);
+        this.guardar = (Button)context.findViewById(R.id.btn_guardad_prod);
+        this.cancelar = (Button)context.findViewById(R.id.btn_cancelar_reg_prod);
         this.porcentaje = (TextView)context.findViewById(R.id.idPorcentaje);
     }
 

@@ -46,18 +46,18 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:layout_margin="10dp"
-                android:id="@+id/idOrden" android:layout_weight="1"/>
+                android:id="@+id/marcaProducto" android:layout_weight="1"/>
         <EditText
                 android:layout_width="30dp"
                 android:layout_height="35dp"
                 android:inputType="date"
                 android:ems="10"
                 android:layout_margin="10dp"
-                android:id="@+id/idFecha" android:layout_weight="1"/>
+                android:id="@+id/fechaRegPro" android:layout_weight="1"/>
         <Spinner
                 android:layout_width="30dp"
                 android:layout_margin="10dp"
-                android:layout_height="35dp" android:id="@+id/lisCiudades" android:layout_weight="1"/>
+                android:layout_height="35dp" android:id="@+id/listaTipoInve" android:layout_weight="1"/>
     </LinearLayout>
     <TextView
             android:text="Nombre del Cliente:"
@@ -82,7 +82,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:layout_margin="10dp"
-            android:id="@+id/idDireccion"/>
+            android:id="@+id/cantidad"/>
     <TextView
             android:text="Descripción:"
             android:layout_width="match_parent"
@@ -102,11 +102,11 @@
         <Button
                 android:text="Guardar"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/idGuardar" android:layout_weight="1"/>
+                android:layout_height="wrap_content" android:id="@+id/btn_guardad_prod" android:layout_weight="1"/>
         <Button
                 android:text="CANCELAR"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/idCancelar" android:layout_weight="1"/>
+                android:layout_height="wrap_content" android:id="@+id/btn_cancelar_reg_prod" android:layout_weight="1"/>
     </LinearLayout>
     <ProgressBar
             style="?android:attr/progressBarStyle"
@@ -114,8 +114,11 @@
             android:layout_height="121dp"
             android:visibility="invisible"
             android:id="@+id/progressBarGuardar"/>
+
     <TextView
-            android:layout_width="match_parent"
-            android:visibility="invisible"
-            android:layout_height="wrap_content" android:id="@+id/idPorcentaje" android:gravity="center"/>
+        android:id="@+id/idPorcentaje"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:visibility="invisible" />
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.contrato.Contratos;
+import com.example.inventario.content_inventario;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.button:
                 startActivity(new Intent(this, Contratos.class));
+                break;
+            case R.id.button2:
+                startActivity(new Intent(this, content_inventario.class));
                 break;
             default:
                 break;

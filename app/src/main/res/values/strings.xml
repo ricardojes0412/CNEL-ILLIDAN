@@ -4,4 +4,19 @@
     <string name="Contraseña">Contraseña</string>
     <string name="Login">Ingresar</string>
     <string name="Register">Registrarse</string>
+    <string name="inv_categoria">CATEGORIA</string>
+    <string name="inv_producto">REGISTRO DE PRODUCTO</string>
+    <string name="inv_lista">LISTA DE PRODUCTOS</string>
+    <string name="reg_categoria">REGISTRO DE CATEGORIA INVENTARIO</string>
+    <string name="text_nombre">NOMBRE</string>
+    <string name="text_descripcion">DESCRIPCIÓN</string>
+    <string name="btn_guardar">GUARDAR</string>
+    <string name="btn_cancelar">CANCELAR</string>
+    <string name="titulo_reg_prod">REGISTRO DE PRODUSCTOS</string>
+    <string name="fecha_pro">FECHA</string>
+    <string name="codigo_pro">CÓDIGO</string>
+    <string name="marca">MARCA</string>
+    <string name="tipo">TIPO</string>
+    <string name="precio">PRECIO</string>
+    <string name="cantidad">CANTIDAD</string>
 </resources>
