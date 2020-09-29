@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ILLIDAN</string>
-    <string name="Usuario">Usuario</string>
-    <string name="Contraseña">Contraseña</string>
-    <string name="Login">Ingresar</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="Login">Iniciar Sesión</string>
     <string name="Register">Registrarse</string>
 </resources>

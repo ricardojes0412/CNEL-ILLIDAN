@@ -3,7 +3,7 @@ package com.example.contrato;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.*;
-import com.example.illidan.MainActivity;
+
 import com.example.illidan.R;
 
 public class anyTaskContratos extends AsyncTask<String, Integer, String> {
