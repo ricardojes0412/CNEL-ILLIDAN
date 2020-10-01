@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.illidan.R;
 
-public class categoriaBeans extends AppCompatActivity {
+public class CategoriaBeans extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

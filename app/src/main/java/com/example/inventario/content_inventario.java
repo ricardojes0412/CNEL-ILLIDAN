@@ -27,10 +27,10 @@ public class content_inventario extends AppCompatActivity implements View.OnClic
     public void onClick (View v){
         switch (v.getId()){
             case R.id.btn_categoria:
-                startActivity(new Intent(this,categoriaBeans.class));
+                startActivity(new Intent(this, CategoriaBeans.class));
                 break;
             case R.id.btn_inventario:
-                startActivity(new Intent(this,productoBeans.class));
+                startActivity(new Intent(this, ProductoBeans.class));
                     break;
             default:
                 break;

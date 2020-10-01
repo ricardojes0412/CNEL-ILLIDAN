@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.illidan.R;
 
-public class productoBeans extends AppCompatActivity {
+public class ProductoBeans extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
