@@ -26,8 +26,8 @@ public class anyTaskContratos extends AsyncTask<String, Integer, String> {
         this.idOrden = (EditText )context.findViewById(R.id.marcaProducto);
         this.idfecha = (EditText)context.findViewById(R.id.fechaRegPro);
         this.idCantones = (Spinner)context.findViewById(R.id.listaTipoInve);
-        this.idCliente = (EditText )context.findViewById(R.id.idCliente);
-        this.idDireccion = (EditText )context.findViewById(R.id.cantidad);
+        this.idCliente = (EditText )context.findViewById(R.id.nombre_prod);
+        this.idDireccion = (EditText )context.findViewById(R.id.descripcion_prod);
         this.idDescripcion = (EditText )context.findViewById(R.id.idDescripcion);
         this.guardar = (Button)context.findViewById(R.id.btn_guardad_prod);
         this.cancelar = (Button)context.findViewById(R.id.btn_cancelar_reg_prod);

@@ -70,7 +70,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:layout_margin="10dp"
-            android:id="@+id/idCliente"/>
+            android:id="@+id/nombre_prod"/>
     <TextView
             android:text="Dirección:"
             android:layout_width="match_parent"
@@ -82,7 +82,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:layout_margin="10dp"
-            android:id="@+id/cantidad"/>
+            android:id="@+id/descripcion_prod"/>
     <TextView
             android:text="Descripción:"
             android:layout_width="match_parent"

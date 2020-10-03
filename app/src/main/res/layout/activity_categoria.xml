@@ -32,20 +32,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNombreCategoria"
+        android:id="@+id/nombre_categ"
         android:layout_width="272dp"
         android:layout_height="48dp"
         android:layout_marginTop="276dp"
         android:ems="10"
         android:hint="@string/text_nombre"
-        android:inputType="textPersonName"
+        android:inputType="textNoSuggestions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/descripcion_catg"
         android:layout_width="271dp"
         android:layout_height="74dp"
         android:layout_marginTop="380dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_guardar_categ"
         android:layout_width="249dp"
         android:layout_height="49dp"
         android:layout_marginTop="544dp"

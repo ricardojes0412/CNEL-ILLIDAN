@@ -12,6 +12,8 @@
         <activity android:name="com.example.activity.AboutUsActivity"/>
         <activity android:name="com.example.activity.ConfigurationActivity" />
         <activity android:name="com.example.activity.ProfileActivity" />
+        <activity android:name="com.example.inventario.CategoriaBeans" />
+        <activity android:name="com.example.inventario.ProductoBeans" />
         <activity android:name="com.example.inventario.ContentInventario">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

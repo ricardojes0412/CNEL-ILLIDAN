@@ -12,11 +12,12 @@ public class Producto {
         private Integer tipo;
         private Integer cantidad;
         private BigDecimal precio;
+        private String codigo;
 
     public Producto() {
     }
 
-    public Producto(Integer id, String nombre, String descripcion, Date fecha, String marca, Integer tipo, Integer cantidad, BigDecimal precio) {
+    public Producto(Integer id, String nombre, String descripcion, Date fecha, String marca, Integer tipo, Integer cantidad, BigDecimal precio, String codigo) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -25,6 +26,7 @@ public class Producto {
         this.tipo = tipo;
         this.cantidad = cantidad;
         this.precio = precio;
+        this.codigo = codigo;
     }
 
     public Integer getId() {
@@ -89,5 +91,13 @@ public class Producto {
 
     public void setPrecio(BigDecimal precio) {
         this.precio = precio;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 }

@@ -10,8 +10,8 @@ import com.example.inventario.utils.Utils;
 
 public class ConexionSqliteOpenHelper extends SQLiteOpenHelper {
 
-    public ConexionSqliteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public ConexionSqliteOpenHelper(@Nullable Context context) {
+        super(context, Utils.NOMBRE_DB, null, 1);
     }
 
     @Override

@@ -82,10 +82,10 @@ public class ContentInventario extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_categoria:
-                startActivity(new Intent(ContentInventario.this, categoriaBeans.class));
+                startActivity(new Intent(ContentInventario.this, CategoriaBeans.class));
                 break;
             case R.id.btn_inventario:
-                startActivity(new Intent(ContentInventario.this, productoBeans.class));
+                startActivity(new Intent(ContentInventario.this, ProductoBeans.class));
                 break;
             default:
                 break;
