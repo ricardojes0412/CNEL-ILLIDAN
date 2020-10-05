@@ -88,6 +88,7 @@ public class ContentInventario extends AppCompatActivity implements View.OnClick
                 startActivity(new Intent(ContentInventario.this, ProductoBeans.class));
                 break;
             default:
+                startActivity(new Intent(ContentInventario.this,ListaProductos.class));
                 break;
         }
     }

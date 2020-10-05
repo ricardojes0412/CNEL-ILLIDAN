@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +37,14 @@ public class CategoriaBeans extends AppCompatActivity implements View.OnClickLis
     }
 
     private void guardar() {
-        System.out.println("entro al metodo guardar");
+        if(Utils.vacio(nombre)){
+            Toast.makeText(getApplicationContext(),"Debe Colocar un Nombre",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(Utils.vacio(descripcion)){
+            Toast.makeText(getApplicationContext(),"Debe Colocar una Descripción",Toast.LENGTH_LONG).show();
+            return;
+        }
         ConexionSqliteOpenHelper con = new ConexionSqliteOpenHelper(this);
         SQLiteDatabase db = con.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -51,5 +59,4 @@ public class CategoriaBeans extends AppCompatActivity implements View.OnClickLis
         nombre.setText("");
         descripcion.setText("");
     }
-
 }

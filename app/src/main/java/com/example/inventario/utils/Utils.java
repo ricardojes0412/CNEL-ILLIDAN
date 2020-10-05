@@ -1,5 +1,8 @@
 package com.example.inventario.utils;
 
+import android.text.TextUtils;
+import android.widget.EditText;
+
 import java.util.Date;
 
 public class Utils {
@@ -17,10 +20,25 @@ public class Utils {
     public static final String CAMPO_TIPO = "tipo";
     public static final String CAMPO_CANTIDAD = "cantidad";
     public static final String CAMPO_PRECIO = "precio";
+    public static final String CAMPO_CODIGO = "codigo";
 
     public static final String CREAR_TABLA_CATEGORIA = "CREATE TABLE " +TABLA_CATEGORIA+
             "("+CAMPO_ID+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,"+CAMPO_NOMBRE+" VARCHAR DEFAULT 350,"+CAMPO_DESCRIPCION+" TEXT)";
     public static final String CREAR_TABLA_PRODUCTO = "CREATE TABLE " +TABLA_PRODUCTO+
             "("+CAMPO_ID+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, "+CAMPO_NOMBRE+" VARCHAR DEFAULT 350,"+CAMPO_DESCRIPCION+" TEXT, " +
-            ""+CAMPO_FECHA+" date, "+CAMPO_MARCA+" VARCHAR, "+CAMPO_TIPO+" INTEGER, "+CAMPO_CANTIDAD+" INTEGER, "+CAMPO_PRECIO+" NUMERIC)";
+            ""+CAMPO_FECHA+" VARCHAR DEFAULT 350, "+CAMPO_MARCA+" VARCHAR, "+CAMPO_TIPO+" INTEGER, "+CAMPO_CANTIDAD+" INTEGER, "+CAMPO_PRECIO+" NUMERIC," +
+            ""+CAMPO_CODIGO+" VARCHAR)";
+
+
+    public static  boolean vacio(EditText campo){
+        String dato = campo.getText().toString().trim();
+        if(TextUtils.isEmpty(dato)){
+            campo.setError("Campo Requerido");
+            campo.requestFocus();
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

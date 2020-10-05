@@ -1,23 +1,24 @@
 package com.example.inventario.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Producto {
+public class Producto implements Serializable {
         private Integer id;
         private String nombre;
         private  String descripcion;
-        private Date fecha;
+        private String fecha;
         private String marca;
         private Integer tipo;
         private Integer cantidad;
-        private BigDecimal precio;
+        private Double precio;
         private String codigo;
 
     public Producto() {
     }
 
-    public Producto(Integer id, String nombre, String descripcion, Date fecha, String marca, Integer tipo, Integer cantidad, BigDecimal precio, String codigo) {
+    public Producto(Integer id, String nombre, String descripcion, String fecha, String marca, Integer tipo, Integer cantidad, Double precio, String codigo) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -53,11 +54,11 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -85,11 +86,11 @@ public class Producto {
         this.cantidad = cantidad;
     }
 
-    public BigDecimal getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(BigDecimal precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
 

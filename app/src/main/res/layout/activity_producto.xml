@@ -59,6 +59,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:layout_margin="10dp"
+            android:textSize="15dp"
             android:id="@+id/marcaProducto" android:layout_weight="1"/>
 
         <EditText
@@ -69,6 +70,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="date"
+            android:textSize="15dp"
             android:focusable="false"/>
 
         <Spinner
@@ -148,6 +150,20 @@
         android:ems="10"
         android:layout_margin="10dp"
         android:id="@+id/descripcion_prod"/>
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/codigo_pro"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:id="@+id/codigo_pro"/>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

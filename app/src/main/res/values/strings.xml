@@ -19,6 +19,8 @@
     <string name="tipo">TIPO</string>
     <string name="precio">PRECIO</string>
     <string name="cantidad">CANTIDAD</string>
+    <string name="tituloListaProd">LISTA DE INVENTARIO</string>
+    <string name="tituloDetalleProduct">DETALLE DE PRODUCTO SELECCIONADO</string>
 
 
     <!--PARA EL MENU -->

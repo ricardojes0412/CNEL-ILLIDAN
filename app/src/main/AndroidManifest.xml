@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.activity.AboutUsActivity"/>
+        <activity android:name="com.example.inventario.DetalleProducto"></activity>
+        <activity android:name="com.example.inventario.ListaProductos" />
+        <activity android:name="com.example.activity.AboutUsActivity" />
         <activity android:name="com.example.activity.ConfigurationActivity" />
         <activity android:name="com.example.activity.ProfileActivity" />
         <activity android:name="com.example.inventario.CategoriaBeans" />
@@ -21,9 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.LoginActivity">
-
-        </activity>
+        <activity android:name="com.example.LoginActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
