@@ -22,17 +22,24 @@
     <string name="tituloListaProd">LISTA DE INVENTARIO</string>
     <string name="tituloDetalleProduct">DETALLE DE PRODUCTO SELECCIONADO</string>
 
+    <!--PARA NOMBRE DEL PROYECTO-->
+    <string name="menu_title">CnelEp</string>
+    <string name="menu_name_app">Illidan</string>
 
     <!--PARA EL MENU -->
     <string name="menu_home">Home</string>
     <string name="menu_activity">Actividad</string>
+    <string name="menu_contratos">Contratos</string>
+    <string name="menu_comunication">Comunicate</string>
+
+
+    <!--PARA EL MENU ITEM -->
     <string name="menu_profile">Perfil</string>
     <string name="menu_configuration">Configuración</string>
+    <string name="contrato_ordenes">Generar Ordenes</string>
+    <string name="contrato_bienes">Asignar Bienes</string>
+    <string name="contrato_responsable">Asignar Responsables</string>
     <string name="menu_about_us">Quiénes Somos</string>
-    <string name="menu_comunication">Comunicate</string>
-    <string name="menu_title">CnelEp</string>
-    <string name="menu_name_app">Illidan</string>
-
 
     <!-- DRAWER -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
