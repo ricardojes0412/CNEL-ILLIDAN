@@ -1,4 +1,4 @@
-package com.example.illidan;
+package com.example;
 
 import android.content.Intent;
 import android.view.MenuItem;
@@ -12,6 +12,7 @@ import com.example.activity.AboutUsActivity;
 import com.example.activity.ConfigurationActivity;
 import com.example.activity.ProfileActivity;
 import com.example.contratos.activitys.RegistroOrdenes;
+import com.example.illidan.R;
 import com.example.inventario.ContentInventario;
 import com.google.android.material.navigation.NavigationView;
 
