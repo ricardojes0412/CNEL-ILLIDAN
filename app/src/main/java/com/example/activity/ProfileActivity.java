@@ -26,11 +26,6 @@ import com.google.android.material.navigation.NavigationView;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
-    ///MENU
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    Toolbar toolbar;
-
     private TextView textView_User;
     private TextView textView_Name;
     private TextView textView_Apellido;
@@ -44,40 +39,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         textView_Name = findViewById(R.id.text_view_name);
         textView_Apellido = findViewById(R.id.text_view_apellido);
         CREDENTIALS = getString(R.string.credentials);
-
         loadPreferences();
-
-        /*------------- HOOKS-------------*/
-        drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-        toolbar = findViewById(R.id.toolbar);
-
-        /*------------- TOOLBAR-------------*/
-        setSupportActionBar(toolbar);
-
-        /*------------- NAVIGATION DRAWER MENU -------------*/
-
-        /* Hide or show items PARA LOS ROLES SUPONGO XD
-        Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_configuration).setVisible(false)*/
-
-        // MUESTRA LA SELECCION EN EL MENU .. DE CADA ITEM
-        navigationView.bringToFront();
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        //ESTABLECER EL ITEM SELECCIONADO  ..
-        navigationView.setNavigationItemSelectedListener(this);
-
-        //
-        navigationView.setCheckedItem(R.id.nav_home);
     }
 
     @Override
     public void onClick(View view) {
-
     }
 
     @Override
@@ -95,8 +61,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(new Intent(this, AboutUsActivity.class));
                 break;
         }
-        //cerrando el drawer en cada seleccion de item
-        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
