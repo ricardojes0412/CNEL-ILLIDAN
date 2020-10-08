@@ -3,6 +3,7 @@ package com.example.utils;
 import android.text.TextUtils;
 import android.widget.EditText;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Utils {
@@ -74,4 +75,11 @@ public class Utils {
             return false;
         }
     }
+
+    public static Integer getAnio(Date fechaIngreso) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(fechaIngreso);
+        return c.get(Calendar.YEAR);
+    }
+
 }
