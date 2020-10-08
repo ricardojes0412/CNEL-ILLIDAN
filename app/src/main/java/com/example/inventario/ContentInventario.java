@@ -7,18 +7,22 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.Model.Persona;
 import com.example.activity.AboutUsActivity;
 import com.example.activity.ConfigurationActivity;
 import com.example.activity.ProfileActivity;
 import com.example.contratos.activitys.RegistroOrdenes;
 import com.example.illidan.R;
+import com.example.utils.Utils;
 import com.google.android.material.navigation.NavigationView;
 
 public class ContentInventario extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
@@ -27,6 +31,8 @@ public class ContentInventario extends AppCompatActivity implements View.OnClick
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    private String CREDENTIALS;
+    Persona persona = new Persona();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,7 @@ public class ContentInventario extends AppCompatActivity implements View.OnClick
         btn_categoria.setOnClickListener(this);
         btn_inventario.setOnClickListener(this);
         btn_lista_prov.setOnClickListener(this);
+        CREDENTIALS = getString(R.string.credentials);
 
 
         /*------------- HOOKS-------------*/
@@ -50,9 +57,14 @@ public class ContentInventario extends AppCompatActivity implements View.OnClick
 
         /*------------- NAVIGATION DRAWER MENU -------------*/
 
-        /* Hide or show items PARA LOS ROLES SUPONGO XD
-        Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_configuration).setVisible(false)*/
+        // Hide or show items PARA LOS ROLES SUPONGO XD
+        //SI NO ES ADMIN SE OCULTA ESAS OPCIONES
+        if (persona.getUser() != null && !persona.getUser().equals(Utils.NOMBRE_ADMIN)) {
+            Menu menu = navigationView.getMenu();
+            menu.findItem(R.id.item_orden).setVisible(false);
+            menu.findItem(R.id.item_bienes).setVisible(false);
+            menu.findItem(R.id.item_responsable).setVisible(false);
+        }
 
         // MUESTRA LA SELECCION EN EL MENU .. DE CADA ITEM
         navigationView.bringToFront();
@@ -89,7 +101,7 @@ public class ContentInventario extends AppCompatActivity implements View.OnClick
                 startActivity(new Intent(ContentInventario.this, ProductoBeans.class));
                 break;
             default:
-                startActivity(new Intent(ContentInventario.this,ListaProductos.class));
+                startActivity(new Intent(ContentInventario.this, ListaProductos.class));
                 break;
         }
     }
@@ -112,5 +124,12 @@ public class ContentInventario extends AppCompatActivity implements View.OnClick
         //cerrando el drawer en cada seleccion de item
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void loadPreferences() {
+        SharedPreferences preferences = getSharedPreferences(CREDENTIALS, Context.MODE_PRIVATE);
+        persona.setUser(preferences.getString(Utils.KEY_USER, ""));
+        persona.setNombre(preferences.getString(Utils.KEY_NAME, ""));
+        persona.setApellido(preferences.getString(Utils.KEY_LASTNAME, ""));
     }
 }

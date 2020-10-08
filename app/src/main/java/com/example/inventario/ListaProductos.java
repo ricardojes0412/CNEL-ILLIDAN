@@ -11,10 +11,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.SQLLite.MyOpenHelper;
 import com.example.illidan.R;
 import com.example.inventario.entity.Producto;
-import com.example.inventario.sqliteConexion.ConexionSqliteOpenHelper;
-import com.example.inventario.utils.Utils;
+import com.example.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -23,13 +23,13 @@ public class ListaProductos extends AppCompatActivity implements View.OnClickLis
     private ListView listaProductos;
     private ArrayList<String> listaDatos;
     private ArrayList<Producto> listaProducto;
-    private ConexionSqliteOpenHelper conex;
+    private MyOpenHelper conex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_productos);
         listaProductos = (ListView) findViewById(R.id.listaProductos);
-        conex = new ConexionSqliteOpenHelper(this);
+        conex = new MyOpenHelper(this);
         consultarProductos();
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaDatos);
         listaProductos.setAdapter(adapter);

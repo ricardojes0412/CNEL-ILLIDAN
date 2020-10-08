@@ -5,15 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.SQLLite.MyOpenHelper;
 import com.example.illidan.R;
-import com.example.inventario.sqliteConexion.ConexionSqliteOpenHelper;
-import com.example.inventario.utils.Utils;
+import com.example.utils.Utils;
 
 public class CategoriaBeans extends AppCompatActivity implements View.OnClickListener{
     
@@ -45,7 +44,7 @@ public class CategoriaBeans extends AppCompatActivity implements View.OnClickLis
             Toast.makeText(getApplicationContext(),"Debe Colocar una Descripción",Toast.LENGTH_LONG).show();
             return;
         }
-        ConexionSqliteOpenHelper con = new ConexionSqliteOpenHelper(this);
+        MyOpenHelper con = new MyOpenHelper(this);
         SQLiteDatabase db = con.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(Utils.CAMPO_NOMBRE,nombre.getText().toString());

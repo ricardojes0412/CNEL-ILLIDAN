@@ -17,17 +17,14 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.SQLLite.MyOpenHelper;
 import com.example.illidan.R;
 import com.example.inventario.entity.Categoria;
-import com.example.inventario.sqliteConexion.ConexionSqliteOpenHelper;
-import com.example.inventario.utils.Utils;
+import com.example.utils.Utils;
 
-import java.math.BigDecimal;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 public class ProductoBeans extends AppCompatActivity implements View.OnClickListener{
@@ -36,7 +33,7 @@ public class ProductoBeans extends AppCompatActivity implements View.OnClickList
     private Button guardar_prod,cancelarProd;
     private EditText marca,nombre,descripcion,fecha,precio,cantidad,codigo;
     private Calendar calendario;
-    private ConexionSqliteOpenHelper con;
+    private MyOpenHelper con;
     private ArrayList<String> listCategoria;
     private ArrayList<Categoria> categoriaList;
     private Integer id_categoria;
@@ -45,7 +42,7 @@ public class ProductoBeans extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_producto);
-        con = new ConexionSqliteOpenHelper(this);
+        con = new MyOpenHelper(this);
         listaTipo = (Spinner) findViewById(R.id.listaTipoInve);
         fecha = (EditText) findViewById(R.id.fechaRegPro);
         marca = (EditText) findViewById(R.id.marcaProducto);
@@ -149,7 +146,7 @@ public class ProductoBeans extends AppCompatActivity implements View.OnClickList
         if (validaciones()){
             return;
         }
-        ConexionSqliteOpenHelper con = new ConexionSqliteOpenHelper(this);
+        MyOpenHelper con = new MyOpenHelper(this);
         SQLiteDatabase db = con.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(Utils.CAMPO_NOMBRE,nombre.getText().toString());

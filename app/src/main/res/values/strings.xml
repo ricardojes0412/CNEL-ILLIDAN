@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ILLIDAN</string>
-    <string name="user">Usuario</string>
-    <string name="password">Contraseña</string>
+    <string name="user">USUARIO</string>
+    <string name="password">CONTRASEÑA</string>
     <string name="Login">Iniciar Sesión</string>
     <string name="Register">Registrarse</string>
     <string name="inv_categoria">CATEGORIA</string>
@@ -9,6 +9,7 @@
     <string name="inv_lista">LISTA DE PRODUCTOS</string>
     <string name="reg_categoria">REGISTRO DE CATEGORIA INVENTARIO</string>
     <string name="text_nombre">NOMBRE</string>
+    <string name="text_apellido">APELLIDO</string>
     <string name="text_descripcion">DESCRIPCIÓN</string>
     <string name="btn_guardar">GUARDAR</string>
     <string name="btn_cancelar">CANCELAR</string>
@@ -44,4 +45,8 @@
     <!-- DRAWER -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!--CREDENTIALS-->
+    <string name="credentials">user_value</string>
 </resources>
