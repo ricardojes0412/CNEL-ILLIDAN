@@ -52,6 +52,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         drawerLayout = drawerLayoutView;
         navigationView = navigationViewId;
         toolbar = toolbarId;
+        setSupportActionBar(toolbar);
+        // MUESTRA LA SELECCION EN EL MENU .. DE CADA ITEM
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);

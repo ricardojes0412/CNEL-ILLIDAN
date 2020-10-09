@@ -46,6 +46,8 @@ public class Index extends AppCompatActivity implements NavigationView.OnNavigat
         drawerLayout = drawerLayoutView;
         navigationView = navigationViewId;
         toolbar = toolbarId;
+        setSupportActionBar(toolbar);
+        // MUESTRA LA SELECCION EN EL MENU .. DE CADA ITEM
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -79,6 +81,8 @@ public class Index extends AppCompatActivity implements NavigationView.OnNavigat
                 break;
             case R.id.nav_inventario:
                 startActivity(new Intent(this, ContentInventario.class));
+                break;
+            case R.id.nav_home:
                 break;
             default:
                 break;
