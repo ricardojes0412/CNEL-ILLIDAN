@@ -51,4 +51,8 @@
 
     <!--CREDENTIALS-->
     <string name="credentials">user_value</string>
+
+    <!--CREDENTIALS-->
+    <string name="title_profile">Datos de Usuario</string>
+
 </resources>

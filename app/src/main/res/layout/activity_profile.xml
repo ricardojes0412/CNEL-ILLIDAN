@@ -9,20 +9,20 @@
     tools:context="com.example.activity.ProfileActivity"
     tools:openDrawer="start">
 
-    <!--<com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_profile"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
-        app:menu="@menu/main_menu" />-->
+        app:menu="@menu/main_menu" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_profile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="#00008577"
@@ -41,6 +41,15 @@
         android:paddingLeft="24dp"
         android:paddingTop="56dp"
         android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_profile"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:padding="10dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

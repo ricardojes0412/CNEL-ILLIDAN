@@ -134,8 +134,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void intentActivity() {
-        Toast.makeText(getBaseContext(), "Bienvenido " + persona.getNombre() == null ?
-                text_user.getText().toString() : persona.getPrimerNombrePrimerApellido(), Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Bienvenido " + persona.getPrimerNombrePrimerApellido(), Toast.LENGTH_LONG).show();
         Intent intent = new Intent(getApplicationContext(), Index.class);
         intent.putExtra("name_user", persona.getNombre());
         startActivityForResult(intent, 0);

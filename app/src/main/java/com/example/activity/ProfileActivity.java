@@ -15,6 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.Index;
+import com.example.contratos.activitys.RegistroOrdenes;
 import com.example.illidan.R;
 import com.example.inventario.CategoriaBeans;
 import com.example.inventario.ContentInventario;
@@ -30,6 +32,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private TextView textView_Name;
     private TextView textView_Apellido;
     private String CREDENTIALS;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,28 +45,24 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         textView_Apellido = findViewById(R.id.text_view_apellido);
         CREDENTIALS = getString(R.string.credentials);
         loadPreferences();
+        loadDataMenu(findViewById(R.id.drawer_layout_profile), findViewById(R.id.nav_view_profile), findViewById(R.id.toolbar_profile), R.id.nav_perfil);
+    }
+
+    public void loadDataMenu(DrawerLayout drawerLayoutView, NavigationView navigationViewId, Toolbar toolbarId, int navId) {
+        drawerLayout = drawerLayoutView;
+        navigationView = navigationViewId;
+        toolbar = toolbarId;
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(navId);
     }
 
     @Override
     public void onClick(View view) {
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_home:
-                startActivity(new Intent(this, ContentInventario.class));
-                break;
-            case R.id.nav_configuration:
-                startActivity(new Intent(this, ConfigurationActivity.class));
-                break;
-            case R.id.nav_perfil: //ES ESTE ACTIVITY
-                break;
-            case R.id.nav_about_us:
-                startActivity(new Intent(this, AboutUsActivity.class));
-                break;
-        }
-        return true;
     }
 
     private void loadPreferences() {
@@ -69,5 +70,34 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         textView_User.setText(preferences.getString(Utils.KEY_USER, ""));
         textView_Name.setText(preferences.getString(Utils.KEY_NAME, ""));
         textView_Apellido.setText(preferences.getString(Utils.KEY_LASTNAME, ""));
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_configuration:
+                startActivity(new Intent(this, ConfigurationActivity.class));
+                break;
+            case R.id.nav_perfil:
+                startActivity(new Intent(this, ProfileActivity.class));
+                break;
+            case R.id.nav_about_us:
+                startActivity(new Intent(this, AboutUsActivity.class));
+                break;
+            case R.id.item_orden:
+                startActivity(new Intent(this, RegistroOrdenes.class));
+                break;
+            case R.id.nav_inventario:
+                startActivity(new Intent(this, ContentInventario.class));
+                break;
+            case R.id.nav_home:
+                startActivity(new Intent(this, Index.class));
+                break;
+            default:
+                break;
+        }
+        //Cerrando el drawer en cada seleccion de item
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
