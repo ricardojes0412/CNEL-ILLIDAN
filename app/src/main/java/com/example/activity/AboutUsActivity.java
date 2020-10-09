@@ -24,7 +24,7 @@ import com.google.android.material.navigation.NavigationView;
 public class AboutUsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     ListView listView;
-    String[] integrants = {"Sergio Cunduri", "Ana ", "Ricardo Muñoz", "David Borbor"};
+    String[] integrants = {"Sergio Cunduri", "Ana Pin ", "Ricardo Muñoz", "Alejandro Gallegos"};
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;

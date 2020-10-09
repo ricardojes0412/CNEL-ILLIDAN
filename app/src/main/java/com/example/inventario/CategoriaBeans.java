@@ -15,11 +15,11 @@ import com.example.illidan.R;
 import com.example.utils.Utils;
 
 public class CategoriaBeans extends AppCompatActivity implements View.OnClickListener{
-    
+
     private Button btn_guardar;
     private EditText nombre;
     private EditText descripcion;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

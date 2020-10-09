@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.example.RegisterUser"/>
+        <activity android:name="com.example.inventario.ConsultaProducto"/>
         <activity android:name="com.example.Index" />
-        <activity android:name="com.example.contratos.activitys.RegistroOrdenes" />
         <activity android:name="com.example.inventario.DetalleProducto" />
         <activity android:name="com.example.inventario.ListaProductos" />
         <activity android:name="com.example.activity.AboutUsActivity" />
