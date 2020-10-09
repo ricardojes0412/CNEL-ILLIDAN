@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.contrato.Contratos"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.contrato.Contratos">
 
     <TextView
         android:id="@+id/idTitulo"
         android:layout_width="match_parent"
         android:layout_height="86dp"
+        android:fontFamily="@font/evelyn"
         android:gravity="center"
         android:text="@string/titulo_reg_prod"
         android:textColorLink="#9C27B0"
         android:textSize="18sp"
         android:textStyle="bold" />
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textView7"
@@ -49,18 +50,21 @@
             android:text="@string/tipo"
             android:textStyle="bold" />
     </LinearLayout>
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <EditText
+            android:id="@+id/marcaProducto"
             android:layout_width="30dp"
             android:layout_height="35dp"
-            android:inputType="textPersonName"
-            android:ems="10"
             android:layout_margin="10dp"
-            android:textSize="15dp"
-            android:id="@+id/marcaProducto" android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="15dp" />
 
         <EditText
             android:id="@+id/fechaRegPro"
@@ -69,38 +73,46 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:ems="10"
+            android:focusable="false"
             android:inputType="date"
-            android:textSize="15dp"
-            android:focusable="false"/>
+            android:textSize="15dp" />
 
         <Spinner
+            android:id="@+id/listaTipoInve"
             android:layout_width="30dp"
+            android:layout_height="35dp"
             android:layout_margin="10dp"
-            android:layout_height="35dp" android:id="@+id/listaTipoInve" android:layout_weight="1"/>
+            android:layout_weight="1" />
     </LinearLayout>
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
             android:id="@+id/textCantidad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:layout_weight="1"
             android:text="@string/cantidad"
-            android:textStyle="bold" android:layout_weight="1"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/textPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:layout_weight="1"
             android:text="@string/precio"
-            android:textStyle="bold" android:layout_weight="1"/>
+            android:textStyle="bold" />
     </LinearLayout>
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/editTextNumberCantidad"
@@ -108,10 +120,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:digits="1234567890"
-            android:singleLine="true"
-            android:maxLength="19"
             android:ems="9"
-            android:inputType="number" />
+            android:inputType="number"
+            android:maxLength="19"
+            android:singleLine="true" />
 
         <EditText
             android:id="@+id/editTextNumberPrecio"
@@ -121,6 +133,7 @@
             android:ems="10"
             android:inputType="numberDecimal" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/textView12"
         android:layout_width="match_parent"
@@ -128,13 +141,14 @@
         android:layout_margin="10dp"
         android:text="@string/text_nombre"
         android:textStyle="bold" />
+
     <EditText
+        android:id="@+id/nombre_prod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:layout_margin="10dp"
-        android:id="@+id/nombre_prod"/>
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView13"
@@ -143,13 +157,15 @@
         android:layout_margin="10dp"
         android:text="@string/text_descripcion"
         android:textStyle="bold" />
+
     <EditText
+        android:id="@+id/descripcion_prod"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:layout_margin="10dp"
-        android:id="@+id/descripcion_prod"/>
+        android:ems="10"
+        android:inputType="textPersonName" />
+
     <TextView
         android:id="@+id/textView14"
         android:layout_width="match_parent"
@@ -157,17 +173,19 @@
         android:layout_margin="10dp"
         android:text="@string/codigo_pro"
         android:textStyle="bold" />
+
     <EditText
+        android:id="@+id/codigo_pro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:layout_margin="10dp"
-        android:id="@+id/codigo_pro"/>
+        android:ems="10"
+        android:inputType="textPersonName" />
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_guardad_prod"
@@ -183,12 +201,13 @@
             android:layout_weight="1"
             android:text="@string/btn_cancelar" />
     </LinearLayout>
+
     <ProgressBar
+        android:id="@+id/progressBarGuardar"
         style="?android:attr/progressBarStyle"
         android:layout_width="match_parent"
         android:layout_height="121dp"
-        android:visibility="invisible"
-        android:id="@+id/progressBarGuardar"/>
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/idPorcentaje"

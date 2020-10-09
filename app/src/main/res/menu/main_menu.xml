@@ -14,26 +14,7 @@
             android:icon="@drawable/icon_add_user"
             android:title="@string/menu_add_usuarios"/>
     </group>
-
-    <item android:title="@string/menu_contratos">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                        android:id="@+id/item_orden"
-                        android:icon="@drawable/icon_file"
-                        android:title="@string/contrato_ordenes"/>
-                <item
-                        android:id="@+id/item_bienes"
-                        android:icon="@drawable/icon_check"
-                        android:title="@string/contrato_bienes"/>
-                <item
-                        android:id="@+id/item_responsable"
-                        android:icon="@drawable/icon_responsable"
-                        android:title="@string/contrato_responsable"/>
-            </group>
-        </menu>
-    </item>
-
+    
     <item android:title="@string/menu_configuration">
         <menu>
             <group android:checkableBehavior="single">

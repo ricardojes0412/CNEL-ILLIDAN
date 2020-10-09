@@ -26,8 +26,9 @@
         android:layout_marginRight="16dp"
         android:gravity="center"
         android:text="@string/tituloDetalleProduct"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:fontFamily="@font/evelyn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
