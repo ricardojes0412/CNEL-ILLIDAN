@@ -21,7 +21,7 @@ import com.example.RegisterUser;
 import com.example.activity.AboutUsActivity;
 import com.example.activity.ConfigurationActivity;
 import com.example.activity.ProfileActivity;
-import com.example.contratos.activitys.RegistroOrdenes;
+//import com.example.contratos.activitys.RegistroOrdenes;
 import com.example.illidan.R;
 import com.example.utils.Utils;
 import com.google.android.material.navigation.NavigationView;
@@ -97,9 +97,9 @@ public class ContentInventario extends AppCompatActivity implements View.OnClick
             case R.id.nav_about_us:
                 startActivity(new Intent(this, AboutUsActivity.class));
                 break;
-            case R.id.item_orden:
+            /*case R.id.item_orden:
                 startActivity(new Intent(this, RegistroOrdenes.class));
-                break;
+                break;*/
             case R.id.nav_inventario:
                 startActivity(new Intent(this, ContentInventario.class));
                 break;

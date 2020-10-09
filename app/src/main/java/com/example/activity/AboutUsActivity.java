@@ -15,7 +15,7 @@ import android.widget.ListView;
 
 import com.example.Index;
 import com.example.RegisterUser;
-import com.example.contratos.activitys.RegistroOrdenes;
+//import com.example.contratos.activitys.RegistroOrdenes;
 import com.example.illidan.R;
 import com.example.inventario.ContentInventario;
 import com.google.android.material.navigation.NavigationView;
@@ -66,9 +66,9 @@ public class AboutUsActivity extends AppCompatActivity implements NavigationView
             case R.id.nav_about_us:
                 startActivity(new Intent(this, AboutUsActivity.class));
                 break;
-            case R.id.item_orden:
+            /*case R.id.item_orden:
                 startActivity(new Intent(this, RegistroOrdenes.class));
-                break;
+                break;*/
             case R.id.nav_inventario:
                 startActivity(new Intent(this, ContentInventario.class));
                 break;
